@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>View Book</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="header">
+            <h1 >View Book</h1>
+         </div>
+         <div class="main">
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Book Name <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="bookName"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Author Name <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="authorEmail"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Website <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="website"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p class="cover-img">Cover Image <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p > <img src="" id="coverImg" width="120px" height="120px"/></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Categories <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="categories"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Date of Publication <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="datepicker"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>ISBN Number <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="isbnNumber"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Price (&#8377) <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="price"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Type <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="typeSelected"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Format <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="format"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>In Stock <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="stockValue"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Rating <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="ratingSelected"> </span></p>
+               </div>
+            </div>
+            <div class="singleContent">
+               <div class="contain-heading">
+                  <p>Review <span>:</span></p>
+               </div>
+               <div class="contain">
+                  <p><span id="comment"> </span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+<script type="text/javascript">
+   document.getElementById("bookName").innerHTML=localStorage.getItem("bookName");
+   document.getElementById("authorEmail").innerHTML=localStorage.getItem("authorEmail");
+   document.getElementById("website").innerHTML=localStorage.getItem("website");
+   document.getElementById("categories").innerHTML=localStorage.getItem("categories");
+   document.getElementById("datepicker").innerHTML=localStorage.getItem("datepicker");
+   document.getElementById("price").innerHTML=localStorage.getItem("price")
+   document.getElementById("isbnNumber").innerHTML=localStorage.getItem("isbnNumber");
+   document.getElementById("typeSelected").innerHTML=localStorage.getItem("typeSelected");
+   document.getElementById("format").innerHTML=localStorage.getItem("format");
+   document.getElementById("ratingSelected").innerHTML=localStorage.getItem("ratingSelected");
+   document.getElementById("comment").innerHTML=localStorage.getItem("comment");
+   document.getElementById("stockValue").innerHTML=localStorage.getItem("stockValue");
+   
+   
+   var coverImg=localStorage.getItem("coverImg");
+     // console.log(w);
+      document.getElementById("coverImg").src = `data:image/png;base64,${coverImg}`;
+   
+   
+   
+   
+</script>
